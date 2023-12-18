@@ -1,0 +1,452 @@
+kristybo@MacBook-Air-Kristina KristyBo_test % cd
+kristybo@MacBook-Air-Kristina ~ % cd KristyBo_test
+cd: no such file or directory: KristyBo_test
+kristybo@MacBook-Air-Kristina ~ % cd ..
+kristybo@MacBook-Air-Kristina /Users % pwd   
+/Users
+kristybo@MacBook-Air-Kristina /Users % cd test
+cd: no such file or directory: test
+kristybo@MacBook-Air-Kristina /Users % mkdir testrusau
+mkdir: testrusau: Permission denied
+kristybo@MacBook-Air-Kristina /Users % cd ~
+kristybo@MacBook-Air-Kristina ~ % mkdir testrusau
+kristybo@MacBook-Air-Kristina ~ % cd testrusau
+kristybo@MacBook-Air-Kristina testrusau % git clone git@github.com:testrusau/testrusau.git
+Cloning into 'testrusau'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 1), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (9/9), done.
+Resolving deltas: 100% (1/1), done.
+kristybo@MacBook-Air-Kristina testrusau % git clone git@github.com:artichokeee/artichokeee.git
+Cloning into 'artichokeee'...
+remote: Enumerating objects: 519, done.
+remote: Counting objects: 100% (85/85), done.
+remote: Compressing objects: 100% (59/59), done.
+remote: Total 519 (delta 26), reused 85 (delta 26), pack-reused 434
+Receiving objects: 100% (519/519), 140.67 KiB | 301.00 KiB/s, done.
+Resolving deltas: 100% (166/166), done.
+kristybo@MacBook-Air-Kristina testrusau % ls    
+artichokeee     testrusau
+kristybo@MacBook-Air-Kristina testrusau % cp -R artichokeee KristyBo_test
+kristybo@MacBook-Air-Kristina testrusau % cp -R artichokee ~/test/KristyBo_test 
+cp: artichokee: No such file or directory
+kristybo@MacBook-Air-Kristina testrusau % cp -R artichokeee ~/test/KristyBo_test 
+kristybo@MacBook-Air-Kristina testrusau % git add   
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+kristybo@MacBook-Air-Kristina testrusau % git add .
+warning: adding embedded git repository: testrusau/KristyBo_test
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint:   git submodule add <url> testrusau/KristyBo_test
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint:   git rm --cached testrusau/KristyBo_test
+hint: 
+hint: See "git help submodule" for more information.
+warning: adding embedded git repository: testrusau/artichokeee
+warning: adding embedded git repository: testrusau/testrusau
+kristybo@MacBook-Air-Kristina testrusau % git commit -m "copy file"
+[master 2e00685] copy file
+ 3 files changed, 3 insertions(+)
+ create mode 160000 testrusau/KristyBo_test
+ create mode 160000 testrusau/artichokeee
+ create mode 160000 testrusau/testrusau
+kristybo@MacBook-Air-Kristina testrusau % git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+kristybo@MacBook-Air-Kristina testrusau % git push/origin
+git: 'push/origin' is not a git command. See 'git --help'.
+kristybo@MacBook-Air-Kristina testrusau % cd ~/test/KristyBo_test
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .
+warning: adding embedded git repository: artichokeee
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint:   git submodule add <url> artichokeee
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint:   git rm --cached artichokeee
+hint: 
+hint: See "git help submodule" for more information.
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "copy file"
+[main 3c943b6] copy file
+ 1 file changed, 1 insertion(+)
+ create mode 160000 artichokeee
+kristybo@MacBook-Air-Kristina KristyBo_test % git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 270 bytes | 270.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/KristyBo/KristyBo_test.git
+   18408f1..3c943b6  main -> main
+kristybo@MacBook-Air-Kristina KristyBo_test %   
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "поменяла заголовок"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   artichokeee (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "поменяла заголовок"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   artichokeee (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+kristybo@MacBook-Air-Kristina KristyBo_test % cd
+kristybo@MacBook-Air-Kristina ~ % git add .
+warning: could not open directory 'Pictures/Photos Library.photoslibrary/': Operation not permitted
+warning: could not open directory 'Library/Application Support/MobileSync/': Operation not permitted
+warning: could not open directory 'Library/Application Support/CallHistoryTransactions/': Operation not permitted
+warning: could not open directory 'Library/Application Support/CloudDocs/session/db/': Operation not permitted
+warning: could not open directory 'Library/Application Support/com.apple.sharedfilelist/': Operation not permitted
+warning: could not open directory 'Library/Application Support/Knowledge/': Operation not permitted
+warning: could not open directory 'Library/Application Support/com.apple.TCC/': Operation not permitted
+warning: could not open directory 'Library/Application Support/FileProvider/': Operation not permitted
+warning: could not open directory 'Library/Application Support/AddressBook/': Operation not permitted
+warning: could not open directory 'Library/Application Support/FaceTime/': Operation not permitted
+warning: could not open directory 'Library/Application Support/com.apple.avfoundation/Frecents/': Operation not permitted
+warning: could not open directory 'Library/Application Support/CallHistoryDB/': Operation not permitted
+warning: could not open directory 'Library/Assistant/SiriVocabulary/': Operation not permitted
+warning: could not open directory 'Library/Daemon Containers/': Operation not permitted
+warning: could not open directory 'Library/Autosave Information/': Operation not permitted
+warning: could not open directory 'Library/IdentityServices/': Operation not permitted
+warning: could not open directory 'Library/Calendars/': Operation not permitted
+warning: could not open directory 'Library/Messages/': Operation not permitted
+warning: could not open directory 'Library/HomeKit/': Operation not permitted
+warning: could not open directory 'Library/Sharing/': Operation not permitted
+warning: could not open directory 'Library/com.apple.aiml.instrumentation/': Operation not permitted
+warning: could not open directory 'Library/Mail/': Operation not permitted
+warning: could not open directory 'Library/Trial/': Operation not permitted
+warning: could not open directory 'Library/AppleMediaServices/': Operation not permitted
+warning: could not open directory 'Library/DuetExpertCenter/': Operation not permitted
+warning: could not open directory 'Library/Accounts/': Operation not permitted
+warning: could not open directory 'Library/Safari/': Operation not permitted
+warning: could not open directory 'Library/Biome/': Operation not permitted
+warning: could not open directory 'Library/IntelligencePlatform/': Operation not permitted
+warning: could not open directory 'Library/Shortcuts/': Operation not permitted
+warning: could not open directory 'Library/Mobile Documents/': Operation not permitted
+warning: could not open directory 'Library/Suggestions/': Operation not permitted
+warning: could not open directory 'Library/Weather/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.stocks-news/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.photolibraryd.private/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.accessibility.voicebanking/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.stocks/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.secure-control-center-preferences/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.chronod/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/com.apple.MailPersonaStorage/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.private.translation/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.iBooks/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.notes.import/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.calendar/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.ip.redirects/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.gamecenter/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.tips/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.ManagedSettings/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.weather/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/com.apple.systempreferences.cache/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.notes/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.tipsnext/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.reminders/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.mail/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/com.apple.bird/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.DeviceActivity/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/com.apple.Home.group/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.iCloudDrive/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/com.apple.PreviewLegacySignaturesConversion/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/group.com.apple.PegasusConfiguration/': Operation not permitted
+warning: could not open directory 'Library/Group Containers/com.apple.MessagesLegacyTransferArchive/': Operation not permitted
+qwarning: could not open directory 'Library/Containers/com.apple.VoiceMemos/': Operation not permitted
+warning: could not open directory 'Library/Containers/com.apple.archiveutility/': Operation not permitted
+warning: could not open directory 'Library/Containers/com.apple.Maps/Data/Maps/': Operation not permitted
+warning: could not open directory 'Library/Containers/com.apple.Home/': Operation not permitted
+warning: could not open directory 'Library/Containers/com.apple.Safari/': Operation not permitted
+^C
+kristybo@MacBook-Air-Kristina ~ % cd ~test/KristyBo_test
+zsh: no such user or named directory: test
+kristybo@MacBook-Air-Kristina ~ % cd ~/test/KristyBo_test
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "поменяла обо мне"  
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   artichokeee (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .                       
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "поменяла соц сети"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   artichokeee (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .                        
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "поменяла основную инфу"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   artichokeee (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+kristybo@MacBook-Air-Kristina KristyBo_test % git push 
+Everything up-to-date
+kristybo@MacBook-Air-Kristina KristyBo_test % git checkout 18408f1ac1dcaed063f1d5e5b905dfed9f508b34
+warning: unable to rmdir 'artichokeee': Directory not empty
+Note: switching to '18408f1ac1dcaed063f1d5e5b905dfed9f508b34'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 18408f1 Initial commit
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "проверка"                             
+HEAD detached at 18408f1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        artichokeee/
+
+nothing added to commit but untracked files present (use "git add" to track)
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .
+warning: adding embedded git repository: artichokeee
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint:   git submodule add <url> artichokeee
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint:   git rm --cached artichokeee
+hint: 
+hint: See "git help submodule" for more information.
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "проверка"
+[detached HEAD 682f396] проверка
+ 1 file changed, 1 insertion(+)
+ create mode 160000 artichokeee
+kristybo@MacBook-Air-Kristina KristyBo_test % git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+kristybo@MacBook-Air-Kristina KristyBo_test % git checkout -b main_test
+Switched to a new branch 'main_test'
+kristybo@MacBook-Air-Kristina KristyBo_test % git push
+fatal: The current branch main_test has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main_test
+
+kristybo@MacBook-Air-Kristina KristyBo_test % git push --set-upstream origin main_test
+To https://github.com/KristyBo/KristyBo_test.git
+ ! [rejected]        main_test -> main_test (non-fast-forward)
+error: failed to push some refs to 'https://github.com/KristyBo/KristyBo_test.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+kristybo@MacBook-Air-Kristina KristyBo_test % git pull
+From https://github.com/KristyBo/KristyBo_test
+ * [new branch]      main_test  -> origin/main_test
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main_test
+
+kristybo@MacBook-Air-Kristina KristyBo_test % git branch --set-upstream-to=origin/<branch> main_test
+zsh: no such file or directory: branch
+kristybo@MacBook-Air-Kristina KristyBo_test % git branch --set-upstream-to=origin/main_test main_test 
+Branch 'main_test' set up to track remote branch 'main_test' from 'origin'.
+kristybo@MacBook-Air-Kristina KristyBo_test % git push
+To https://github.com/KristyBo/KristyBo_test.git
+ ! [rejected]        main_test -> main_test (non-fast-forward)
+error: failed to push some refs to 'https://github.com/KristyBo/KristyBo_test.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+kristybo@MacBook-Air-Kristina KristyBo_test % git checkout 18408f1ac1dcaed063f1d5e5b905dfed9f508b34  
+warning: unable to rmdir 'artichokeee': Directory not empty
+Note: switching to '18408f1ac1dcaed063f1d5e5b905dfed9f508b34'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 18408f1 Initial commit
+kristybo@MacBook-Air-Kristina KristyBo_test % git checkout -b main_1                                 
+Switched to a new branch 'main_1'
+kristybo@MacBook-Air-Kristina KristyBo_test % git push
+fatal: The current branch main_1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main_1
+
+kristybo@MacBook-Air-Kristina KristyBo_test %  git push --set-upstream origin main_1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'main_1' on GitHub by visiting:
+remote:      https://github.com/KristyBo/KristyBo_test/pull/new/main_1
+remote: 
+To https://github.com/KristyBo/KristyBo_test.git
+ * [new branch]      main_1 -> main_1
+Branch 'main_1' set up to track remote branch 'main_1' from 'origin'.
+kristybo@MacBook-Air-Kristina KristyBo_test % cp -R ~/test/KristyBo_test/artichokeee ~/test/KristyBo_test 
+cp: /Users/kristybo/test/KristyBo_test/artichokeee and /Users/kristybo/test/KristyBo_test/artichokeee are identical (not copied).
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .
+warning: adding embedded git repository: artichokeee
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint:   git submodule add <url> artichokeee
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint:   git rm --cached artichokeee
+hint: 
+hint: See "git help submodule" for more information.
+kristybo@MacBook-Air-Kristina KristyBo_test % git add artichokeee/assets/Frame\ 635\ \(3\).png 
+kristybo@MacBook-Air-Kristina KristyBo_test % git add artichokeee/README.md 
+kristybo@MacBook-Air-Kristina KristyBo_test % mkdir artichokeee
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "добавили папку"
+On branch main_1
+Your branch is up to date with 'origin/main_1'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        artichokeee/
+
+nothing added to commit but untracked files present (use "git add" to track)
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "добавили папку"
+[main_1 b685efb] добавили папку
+ 2 files changed, 94 insertions(+)
+ create mode 100644 artichokeee/README.md
+ create mode 100644 artichokeee/assets/Frame 635 (3).png
+kristybo@MacBook-Air-Kristina KristyBo_test % git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 36.55 KiB | 9.14 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/KristyBo/KristyBo_test.git
+   18408f1..b685efb  main_1 -> main_1
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .
+kristybo@MacBook-Air-Kristina KristyBo_test % add commit -m "обновление заголовка"
+zsh: command not found: add
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "обновление заголовка"
+[main_1 76b5e9f] обновление заголовка
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "обновление осн инф"  
+On branch main_1
+Your branch is ahead of 'origin/main_1' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   artichokeee/README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "обновление осн инф"  
+[main_1 a567c72] обновление осн инф
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "обновление соц сети"  
+[main_1 599c11c] обновление соц сети
+ 1 file changed, 2 insertions(+), 14 deletions(-)
+kristybo@MacBook-Air-Kristina KristyBo_test % git add .
+kristybo@MacBook-Air-Kristina KristyBo_test % git commit -m "обновление иконок"    
+[main_1 01540ed] обновление иконок
+ 1 file changed, 10 insertions(+), 13 deletions(-)
+kristybo@MacBook-Air-Kristina KristyBo_test % git push
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 1.85 KiB | 947.00 KiB/s, done.
+Total 16 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+To https://github.com/KristyBo/KristyBo_test.git
+   b685efb..01540ed  main_1 -> main_1
+kristybo@MacBook-Air-Kristina KristyBo_test % 
